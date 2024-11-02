@@ -1,0 +1,115 @@
+body {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.regex-input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-family: monospace;
+}
+
+.regex-slash {
+    font-size: 18px;
+    margin: 0 5px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    font-family: monospace;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.flags-group {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.flag-btn {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background: white;
+}
+
+.flag-btn.active {
+    background: #e0e0e0;
+}
+
+#text {
+    min-height: 200px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    color: transparent;
+    caret-color: black;
+    resize: none;
+    overflow-y: hidden;
+}
+
+#highlightLayer {
+    position: absolute;
+    top: 0;           /* 0으로 변경 */
+    left: 0;          /* 0으로 변경 */
+    right: 0;         /* 0으로 변경 */
+    bottom: 0;        /* 0으로 변경 */
+    color: #000;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.text-wrapper {
+    position: relative;
+    height: auto; /* 추가 */
+    min-height: 200px; /* 추가 */
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+#text, #highlightLayer {
+    /* 공통 스타일 적용 */
+    width: 100%;
+    padding: 8px;
+    font-family: monospace;
+    font-size: 14px;  /* 폰트 크기 명시 */
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    box-sizing: border-box; /* 패딩을 포함한 크기 계산 */
+}

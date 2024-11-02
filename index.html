@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WENIV 정규표현식</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>WENIV 정규표현식</h1>
+    
+        <div class="input-group">
+            <label>정규표현식</label>
+            <div class="regex-input-container">
+                <span class="regex-slash">/</span>
+                <input type="text" id="regex">
+                <span class="regex-slash">/gm</span>
+            </div>
+            <div id="error" class="error"></div>
+        </div>
+    
+        <div class="flags-group">
+            <!-- <button class="flag-btn" data-flag="g">Global (g)</button> -->
+            <button class="flag-btn" data-flag="i">Ignore Case (i)</button>
+            <!-- <button class="flag-btn" data-flag="m">Multiline (m)</button> -->
+        </div>
+    
+        <div class="input-group">
+            <label>테스트 텍스트:</label>
+            <div class="text-wrapper">
+                <textarea id="text">hello
+Hello
+hello
+Hello
+                </textarea>
+                <div id="highlightLayer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="core.js"></script>
+</body>
+</html>
